@@ -7,8 +7,13 @@ import {mapToWheaterEntity} from "@/infrastructure/weather/mappers/WeatherMapper
 
 export class OpenWeatherApi implements WeatherRepository {
     async getByCity(city: string): Promise<Weather> {
-        const apiKey = import.meta.env.VITE_API_KEY
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=es`
+        const {
+            VITE_OPEN_WEATHER_API_KEY: apiKey,
+            VITE_DEFAULT_LANG: lang,
+            VITE_WEATHER_UNITS: units,
+            VITE_OPEN_WEATHER_BASE_URL: baseUrl,
+        }: ImportMetaEnv = import.meta.env;
+        const url = `${baseUrl}?q=${city}&appid=${apiKey}&units=${units}&lang=${lang}`
         const { data } = await axios.get<RawWeatherDto>(url)
         return mapToWheaterEntity(data)
     }
