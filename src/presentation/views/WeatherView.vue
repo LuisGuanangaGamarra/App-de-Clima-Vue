@@ -1,16 +1,24 @@
 <template>
-  <div class="max-w-md mx-auto mt-10">
-    <h1 class="text-3xl font-bold mb-6 text-center text-white">App de Clima</h1>
-
-    <form @submit.prevent="fetch(city)" class="mb-6">
-      <input v-model="city" class="w-full p-3 rounded text-black outline outline-offset-2" placeholder="Ingresa una ciudad" />
-      <button class="w-full mt-2 py-2 bg-sky-500 text-white cursor-pointer rounded font-bold">Buscar</button>
-    </form>
-
+  <div class="min-h-screen bg-gradient-to-br from-[#cbe7ff] to-[#a3d0f7] flex flex-col items-center justify-center px-4">
+    <div class="flex w-full max-w-xl items-center bg-white/80 shadow-lg rounded-full px-6 py-3 backdrop-blur-md ring-1 ring-white/20 mb-8">
+      <input
+          v-model="city"
+          type="text"
+          placeholder="Ingresa una ciudad..."
+          class="flex-1 text-gray-700 text-lg bg-transparent outline-none placeholder-gray-500"
+      />
+      <button
+          @click="fetch(city)"
+          class="cursor-pointer ml-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition-transform"
+      >
+        Buscar
+      </button>
+    </div>
     <weather-card v-if="weather" :weather="weather" />
-    <p v-if="error" class="text-red-300 mt-4 text-center">{{ error }}</p>
+    <p v-if="error" class="text-red-500 text-lg">{{ error }}</p>
   </div>
 </template>
+
 
 <script setup lang="ts">
 import {useWeather} from "@/presentation/composables/useWeather";
