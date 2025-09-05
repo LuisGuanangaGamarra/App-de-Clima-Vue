@@ -1,9 +1,6 @@
 # 🌤️ App de Clima con Vue 3 + Clean Architecture
 
 Aplicación web elegante construida con **Vue 3**, **Vite**, **TailwindCSS** y principios de **Clean Code** & **Arquitectura Limpia**. Consulta el clima actual por ciudad usando la API de [OpenWeatherMap](https://openweathermap.org/api).
-
-![clima-vue](./preview.png)
-
 ---
 
 ## 🚀 Tecnologías
@@ -36,7 +33,8 @@ src/
 
 | Pantalla de búsqueda | Resultado del clima |
 |----------------------|---------------------|
-| ![busqueda](./screens/search.png) | ![resultado](./screens/result.png) |
+| ![Busqueda](https://github.com/user-attachments/assets/d8b363da-2241-4245-9fec-c0dfa0b3484c) | ![Resultado](https://github.com/user-attachments/assets/ab5643b5-2313-47f7-87b2-acac0b523356) |
+
 
 ---
 
