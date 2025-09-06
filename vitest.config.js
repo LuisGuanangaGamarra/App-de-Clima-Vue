@@ -1,11 +1,10 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
-import tsconfigPaths from 'vite-tsconfig-paths'
-import { fileURLToPath, URL} from "node:url";
+import {fileURLToPath, URL} from "node:url";
 
 export default defineConfig({
-    plugins: [vue(), tsconfigPaths()],
+    plugins: [vue()],
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -26,15 +25,13 @@ export default defineConfig({
             {
                 name: 'components',
                 environment: 'jsdom',
-                include: ['tests/**/*.vue.spec.{ts,js}'],
                 globals: true,
-                setupFiles: ['tests/components/setup-jsdom.ts'],
+                include: ['tests/**/*.component.spec.{ts,js}'],
                 coverage: {
                     reporter: ['text', 'html', 'json'],
                     reportsDirectory: './coverage/components',
                 },
             },
         ],
-        globals: true
     },
 })

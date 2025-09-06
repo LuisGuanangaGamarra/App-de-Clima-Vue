@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import WeatherCard from '@/components/WeatherCard.vue'
+import WeatherCard from '../../src/presentation/components/WeatherCard.vue'
 
 describe('WeatherCard', () => {
     it('debe renderizar correctamente los datos', () => {
