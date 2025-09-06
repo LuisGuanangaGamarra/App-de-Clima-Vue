@@ -10,11 +10,11 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "types": ["vite/client"],
+    "types": ["vite/client", "vitest/globals"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "env.d.ts"]
+  "include": ["src", "env.d.ts", "tests", "vitest.config.js", "playwright.config.ts"],
 }
