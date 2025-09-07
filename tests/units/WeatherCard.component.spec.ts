@@ -1,14 +1,19 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import WeatherCard from '../../src/presentation/components/WeatherCard.vue'
+import WeatherCard from '@/presentation/components/WeatherCard.vue'
 
 describe('WeatherCard', () => {
     it('debe renderizar correctamente los datos', () => {
         const wrapper = mount(WeatherCard, {
             props: {
-                city: 'Quito',
-                temperature: 21,
-                description: 'nublado'
+                weather: {
+                    name: 'Quito',
+                    description: 'nublado',
+                    icon: '01d',
+                    temperature: 21,
+                    feels_like: 20,
+                    humidity: 50
+                }
             }
         })
         expect(wrapper.text()).toContain('Quito')
