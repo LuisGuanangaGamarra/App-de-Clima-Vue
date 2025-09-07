@@ -7,7 +7,7 @@ describe('WeatherCard', () => {
         const wrapper = mount(WeatherCard, {
             props: {
                 weather: {
-                    name: 'Quito',
+                    city: 'Quito',
                     description: 'nublado',
                     icon: '01d',
                     temperature: 21,

@@ -3,7 +3,7 @@
     <div
         class="bg-white/60 shadow-2xl rounded-3xl p-8 w-full max-w-lg text-center backdrop-blur-md ring-1 ring-white/10"
     >
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">{{ weather.name }}</h2>
+      <h2 class="text-3xl font-bold text-indigo-700 mb-4">{{ weather.city }}</h2>
 
       <div class="flex justify-center mb-3">
         <img
@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { Weather } from '@/domain/entities/weather';
+import { Weather } from '@/domain/entities/Weather';
 
 defineProps<{ weather: Weather }>();
 </script>

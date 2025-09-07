@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": [
+      "vitest/globals",
+      "vite/client",
+      "node",
+      "jsdom"
+    ],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": [
+    "env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests",
+  ]
+}
