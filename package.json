@@ -14,7 +14,7 @@
     "test:coverage": "vitest run --coverage --config vitest.config.js",
     "test:node": "vitest run --config vitest.config.js --project node",
     "test:components": "vitest run --config vitest.config.js --project jsdom",
-    "test:e2e": "playwright test"
+    "test:e2e": "npx playwright test"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",

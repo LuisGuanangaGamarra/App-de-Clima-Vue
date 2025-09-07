@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import WeatherView from "@/presentation/views/WeatherView.vue";
+  import WeatherView from "@/presentation/views/WeatherView.vue";
 </script>
 
 <template>
-<weather-view />
+  <weather-view />
 </template>
-
-<style scoped></style>
