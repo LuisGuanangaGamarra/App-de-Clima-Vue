@@ -15,6 +15,14 @@ export default defineConfig({
         coverage: {
             reporter: ['text', 'lcov'],
             reportsDirectory: './coverage',
+            exclude: [
+                'playwright.config.ts',
+                'tests/e2e/**/*',
+                'env.d.ts',
+                'vite.config.js',
+                'vitest.config.js',
+                'src/main.js'
+            ]
         },
         projects: [
             {
@@ -22,7 +30,7 @@ export default defineConfig({
                 test: {
                     name: 'jsdom',
                     environment: 'jsdom',
-                    include: ['tests/units/*.component.spec.{ts,js}'],
+                    include: ['tests/**/*.component.spec.{ts,js}'],
                 },
             },
             {
@@ -31,7 +39,7 @@ export default defineConfig({
                     name: 'node',
                     environment: 'node',
                     extends: true,
-                    include: ['tests/units/*.node.spec.{ts,js}'],
+                    include: ['tests/**/*.node.spec.{ts,js}'],
                 },
             },
         ],
