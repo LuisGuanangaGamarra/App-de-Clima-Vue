@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div
-        class="bg-white/60 shadow-2xl rounded-3xl p-8 w-full max-w-lg text-center backdrop-blur-md ring-1 ring-white/10"
+        class="weather-card bg-white/60 shadow-2xl rounded-3xl p-8 w-full max-w-lg text-center backdrop-blur-md ring-1 ring-white/10"
     >
       <h2 class="text-3xl font-bold text-indigo-700 mb-4">{{ weather.city }}</h2>
 
